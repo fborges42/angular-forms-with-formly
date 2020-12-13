@@ -1,9 +1,18 @@
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
   <formly-form [form]="form" [model]="model" [fields]="fields"> </formly-form>
 
-  <button type="submit" color="primary" mat-raised-button>Submit</button>
-
+  <button
+    type="submit"
+    style="margin-right: 1em"
+    color="primary"
+    mat-raised-button
+  >
+    Submit
+  </button>
   <button type="reset" color="warn" mat-raised-button>Reset</button>
 </form>
 
-{{ model | json }}
+<div style="margin-top: 1em">
+  <p>Data model:</p>
+  {{ model | json }}
+</div>

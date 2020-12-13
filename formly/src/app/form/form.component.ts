@@ -12,20 +12,20 @@ export class FormComponent {
   model = {};
   fields: FormlyFieldConfig[] = [
     {
-      key: 'input',
+      key: 'name',
       type: 'input',
       templateOptions: {
-        label: 'Input',
-        placeholder: 'Input placeholder',
+        label: 'Name',
+        placeholder: 'John Legend',
         required: true,
       },
     },
     {
-      key: 'ip',
+      key: 'address',
       type: 'input',
       templateOptions: {
         label: 'IP Address',
-        description: 'IP for the machine A',
+        placeholder: '192.168.1.1',
         required: true,
       },
       validators: {
@@ -33,18 +33,16 @@ export class FormComponent {
       },
     },
     {
-      key: 'radio-1',
+      key: 'env',
       type: 'radio',
       templateOptions: {
-        label: 'Radio',
-        placeholder: 'this is a placeholder',
+        label: 'Environment',
         required: true,
         options: [
-          { value: 1, label: 'Option 1' },
-          { value: 2, label: 'Option 2' },
-          { value: 3, label: 'Option 3' },
-          { value: 3.5, label: 'Option 3.5' },
-          { value: 4, label: 'Option 4', disabled: true },
+          { value: 1, label: 'Develop' },
+          { value: 2, label: 'E2E' },
+          { value: 3, label: 'PRE-PROD' },
+          { value: 4, label: 'PROD', disabled: true },
         ],
       },
     },
